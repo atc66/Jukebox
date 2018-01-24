@@ -15,6 +15,8 @@ start.addEventListener('click', function(){
 	;
 })
 
+var getaudio = $('#player')[0];
+
 
 function Playlist(){
 	this.songs = []
@@ -22,6 +24,7 @@ function Playlist(){
 		this.songs.push(x)
 		console.log('A new song was added')
 	}
+
 	this.listSongs = function(x){
 		for (var i = 0; i < this.songs.length; i++){
 			console.log(this.songs[i].name + ' is on your playlist')
@@ -29,7 +32,7 @@ function Playlist(){
 	}
 }
 
-class Songs {
+class Song {
 	constructor (title, artist, location){
 		this.title = title;
 		this.artist = artist;
