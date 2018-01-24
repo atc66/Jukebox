@@ -1,12 +1,16 @@
 console.log('test')
 
 
-var box = getElementById('box')
-var play = getElementById('play')
-var pause = getElementById('pause')
-var ff = getElementById('ff')
-var rew = getElementById('rew')
-var skipf = getElementById('skipf')
-var skipb = getElementById('skipb')
-var song = getElementById('song')
-var pause = getElementById('pause')
+var box = document.getElementById('box')
+var play = document.getElementById('play')
+var pause = document.getElementById('pause')
+var ff = document.getElementById('ff')
+var rew = document.getElementById('rew')
+var skipf = document.getElementById('skipf')
+var skipb = document.getElementById('skipb')
+var song = document.getElementById('song')
+var pause = document.getElementById('pause')
+
+play.addEventListener('click', function(){
+	;
+})
