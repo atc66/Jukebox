@@ -16,6 +16,7 @@ body{
 	border: 5px solid black;
 	display: block;
 	float: left;
+	cursor: pointer;
 }
 
 #song {
