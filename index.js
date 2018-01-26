@@ -21,7 +21,7 @@ pausebtn.addEventListener('click', function(){
 	audio.pause();
 })
 
-
+// Skipping Tracks
 skipbtn.addEventListener('click', function(){
 	if ( i === playlist.length-1){
 		i = 0
