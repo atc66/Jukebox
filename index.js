@@ -5,7 +5,8 @@ i = 0;
 // // Button Function
 var playbtn = document.getElementById('play');
 var pausebtn = document.getElementById('pause');
-var skipbtn = document.getElementById('skipf');
+var skipbtn = document.getElementById('next');
+
 
 // Setting Playlist
 var playlist = ["audio/song2.mp3","audio/song3.mp3", "audio/song4.mp3"];
@@ -33,4 +34,32 @@ skipbtn.addEventListener('click', function(){
 		audio.play()
 	}
 })
+
+
+
+// // display the songtitle
+document.getElementById('trackTitle').innerHTML = "track" + (i+1) ;
+
+// OO
+// function Jukebox(){
+// 	this.playbtn = playbtn.addEventListener('click', function(){
+// 		audio.play();
+// 	})
+
+// 	this.pausebtn = pausebtn.addEventListener('click', function(){
+// 		audio.pause();
+// 	})
+
+// 	this.skipbtn = skipbtn.addEventListener('click', function(){
+// 		if ( i === playlist.length-1){
+// 			i = 0
+// 			audio.src = playlist[i];
+// 			audio.play()
+// 		} else {
+// 			i++
+// 			audio.src = playlist[i];
+// 			audio.play()
+// 		}
+// 	})
+// }
 

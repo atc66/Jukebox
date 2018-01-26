@@ -7,43 +7,21 @@ body{
 	height: 250px;
 	background-color: blue;
 	margin: 0 auto;
+	border: 5px solid black;
 }
 
 .jukeboxButton { 
 	height: 25px;
-	width: 12.5%;
+	width: 32.9%;
 	background-color: green;
-	border: 5px solid black;
+	border: 1px solid black;
 	display: block;
 	float: left;
+	text-align: center;
 	cursor: pointer;
 }
 
-#song {
+/*#song {
 	width:98%;
 	background-color: pink;
-}
-
-#play {
-	background-image: url(images/play.png);
-	background-size: 25px;
-	height: 25px;
-	background-repeat: no-repeat;
-
-}
-
-#pause {
-	background-image: url(images/pause.png);
-	background-size: 25px;
-	height: 25px;
-	background-repeat: no-repeat;
-
-}
-
-#skipf {
-	background-image: url(images/skipf.png);
-	background-size: 25px;
-	height: 25px;
-	background-repeat: no-repeat;
-
 }
