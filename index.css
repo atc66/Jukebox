@@ -16,9 +16,34 @@ body{
 	border: 5px solid black;
 	display: block;
 	float: left;
+	cursor: pointer;
 }
 
 #song {
 	width:98%;
 	background-color: pink;
+}
+
+#play {
+	background-image: url(images/play.png);
+	background-size: 25px;
+	height: 25px;
+	background-repeat: no-repeat;
+
+}
+
+#pause {
+	background-image: url(images/pause.png);
+	background-size: 25px;
+	height: 25px;
+	background-repeat: no-repeat;
+
+}
+
+#skipf {
+	background-image: url(images/skipf.png);
+	background-size: 25px;
+	height: 25px;
+	background-repeat: no-repeat;
+
 }
