@@ -33,12 +33,15 @@ skipbtn.addEventListener('click', function(){
 		audio.src = playlist[i];
 		audio.play()
 	}
+	// display the songtitle after skipping track
+	document.getElementById('trackTitle').innerHTML = "track " + (playlist[i]);
 })
 
+// display sound track
+document.getElementById('trackTitle').innerHTML = "track " + (playlist[i]);
 
 
-// // display the songtitle
-document.getElementById('trackTitle').innerHTML = "track" + (i+1) ;
+
 
 // OO
 // function Jukebox(){
