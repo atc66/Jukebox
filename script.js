@@ -15,12 +15,12 @@ audio.src = playlist[i];
 document.getElementById('trackTitle').innerHTML = "track " + (playlist[i]);
 
 // Object
-var Jukebox ={
+function Jukebox = {
 
 	playlist: ["audio/song2.mp3","audio/song3.mp3", "audio/song4.mp3"],
 // the play method
-	play: function(){
-		playbtn.addEventListener('click', function(){
+	this.play = function(){
+		var playbtn = playbtn.addEventListener('click', function(){
 		audio.play();
 		})
 	},

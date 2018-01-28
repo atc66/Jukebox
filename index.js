@@ -12,17 +12,17 @@ var skipbtn = document.getElementById('next');
 var playlist = ["audio/song2.mp3","audio/song3.mp3", "audio/song4.mp3"];
 audio.src = playlist[i];
 
-// Press play music begin
+// // Press play music begin
 playbtn.addEventListener('click', function(){
 	audio.play();
 })
 
-// Press pause music pauses
+// // Press pause music pauses
 pausebtn.addEventListener('click', function(){
 	audio.pause();
 })
 
-// Skipping Tracks
+// // Skipping Tracks
 skipbtn.addEventListener('click', function(){
 	if ( i === playlist.length-1){
 		i = 0
@@ -33,7 +33,7 @@ skipbtn.addEventListener('click', function(){
 		audio.src = playlist[i];
 		audio.play()
 	}
-	// display the songtitle after skipping track
+// 	// display the songtitle after skipping track
 	document.getElementById('trackTitle').innerHTML = "track " + (playlist[i]);
 })
 
@@ -44,25 +44,27 @@ document.getElementById('trackTitle').innerHTML = "track " + (playlist[i]);
 
 
 // OO
-// function Jukebox(){
-// 	this.playbtn = playbtn.addEventListener('click', function(){
-// 		audio.play();
-// 	})
+function Jukebox(){
+	this.playlist = ["audio/song2.mp3","audio/song3.mp3", "audio/song4.mp3"]
+	this.currentIndex = 0
+	this.playbtn = playbtn.addEventListener('click', function(){
+		this.audio.play();
+	})
 
-// 	this.pausebtn = pausebtn.addEventListener('click', function(){
-// 		audio.pause();
-// 	})
+	this.pausebtn = pausebtn.addEventListener('click', function(){
+		this.audio.pause();
+	})
 
-// 	this.skipbtn = skipbtn.addEventListener('click', function(){
-// 		if ( i === playlist.length-1){
-// 			i = 0
-// 			audio.src = playlist[i];
-// 			audio.play()
-// 		} else {
-// 			i++
-// 			audio.src = playlist[i];
-// 			audio.play()
-// 		}
-// 	})
-// }
+	this.skipbtn = skipbtn.addEventListener('click', function(){
+		if ( i === this.playlist.length-1){
+			i = 0
+			this.audio.src = this.playlist[i];
+			this.audio.play()
+		} else {
+			i++
+			this.audio.src = this.playlist[i];
+			this.audio.play()
+		}
+	})
+}
 
