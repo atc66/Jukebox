@@ -2,7 +2,7 @@
 var audio = new Audio();
 i = 0;
 
-// // Button Function
+// Button Function
 var playbtn = document.getElementById('play');
 var pausebtn = document.getElementById('pause');
 var skipbtn = document.getElementById('next');
@@ -12,17 +12,17 @@ var skipbtn = document.getElementById('next');
 var playlist = ["audio/song2.mp3","audio/song3.mp3", "audio/song4.mp3"];
 audio.src = playlist[i];
 
-// // Press play music begin
+// Press play music begin
 playbtn.addEventListener('click', function(){
 	audio.play();
 })
 
-// // Press pause music pauses
+// Press pause music pauses
 pausebtn.addEventListener('click', function(){
 	audio.pause();
 })
 
-// // Skipping Tracks
+// Skipping Tracks
 skipbtn.addEventListener('click', function(){
 	if ( i === playlist.length-1){
 		i = 0
@@ -33,7 +33,7 @@ skipbtn.addEventListener('click', function(){
 		audio.src = playlist[i];
 		audio.play()
 	}
-// 	// display the songtitle after skipping track
+// display the songtitle after skipping track
 	document.getElementById('trackTitle').innerHTML = "track " + (playlist[i]);
 })
 
@@ -44,27 +44,33 @@ document.getElementById('trackTitle').innerHTML = "track " + (playlist[i]);
 
 
 // OO
-function Jukebox(){
-	this.playlist = ["audio/song2.mp3","audio/song3.mp3", "audio/song4.mp3"]
-	this.currentIndex = 0
-	this.playbtn = playbtn.addEventListener('click', function(){
-		this.audio.play();
-	})
+// var audio = new Audio();
+// i = 0;
 
-	this.pausebtn = pausebtn.addEventListener('click', function(){
-		this.audio.pause();
-	})
+// function Jukebox(){
+// 	var playbtn = document.getElementById('play');
+// 	var pausebtn = document.getElementById('pause');
+// 	var skipbtn = document.getElementById('next');
 
-	this.skipbtn = skipbtn.addEventListener('click', function(){
-		if ( i === this.playlist.length-1){
-			i = 0
-			this.audio.src = this.playlist[i];
-			this.audio.play()
-		} else {
-			i++
-			this.audio.src = this.playlist[i];
-			this.audio.play()
-		}
-	})
-}
+// 	this.playList = ["audio/song2.mp3","audio/song3.mp3", "audio/song4.mp3"]
+// 	this.playBtn = playbtn.addEventListener('click', function(){
+// 		this.audio.play();
+// 	})
+
+// 	this.pauseBtn = pausebtn.addEventListener('click', function(){
+// 		this.audio.pause();
+// 	})
+
+// 	this.skipBtn = skipbtn.addEventListener('click', function(){
+// 		if ( i === this.playList.length-1){
+// 			i = 0
+// 			this.audio.src = this.playList[i];
+// 			this.audio.play()
+// 		} else {
+// 			i++
+// 			this.audio.src = this.playList[i];
+// 			this.audio.play()
+// 		}
+// 	})
+// }
 
